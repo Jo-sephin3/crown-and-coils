@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown & Coils</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css">
+
+
+
+        <!-- auth -->
+  <script src="auth-backend.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- ==NAVIGATION -->
+  <header>
+    <div class="nav-container">
+
+      <div class="logo">
+        <img src="images/logo-rbg.png" id="logo-img" alt="Crown & Coils">
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services/Hairstyles</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+    <!-- login link -->
+          <li id="login-link">
+            <a id="open-auth" href="javascript:void(0)">Login / Sign Up</a>
+          </li>
+
+    <!-- account icon hidden until logged in -->
+          <li id="account-menu-wrapper" style="display:none;">
+            <i class="fa-solid fa-user" id="account-icon" style="font-size:22px; color:#ffecd6; cursor:pointer;"></i>
+            <ul id="account-menu" class="account-dropdown">
+              <li><a href="profile.html">My Profile</a></li>
+              <li><a href="bookings.html">My Bookings</a></li>
+              <li id="logout-btn">Log Out</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    
+    </div>
+
+    <!-- banner -->
+    <div class="second-section">
+      <img src="images/header.svg" class="banner-img" alt="Banner">
+
+      <div class="banner-cta">
+        <a href= "services.html#services"class="book-btn">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- home -->
+  <section id="home">
+
+    <div class="four-column-container">
+
+      <!-- left card -->
+      <div class="left-card">
+        <h3>Our Mission</h3>
+        <p>We crown every client with confidence; combining artistry, healthy techniques, and personalized care.</p>
+        <img src="images/image3.jpg" class="sub-img">
+        <img src="images/image7.jpg" class="sub-img">
+      </div>
+
+      <!-- center column 1 -->
+      <div class="center-col">
+        <img src="images/left-cont.jpg" class="main-img">
+        <img src="images/image4.jpg" class="sub-img">
+        <img src="images/image8.jpg" class="sub-img">
+      </div>
+
+      <!-- center column 2 -->
+      <div class="center-col">
+        <img src="images/middle-pic.jpg" class="main-img">
+        <img src="images/image5.jpg" class="sub-img">
+      </div>
+
+      <!-- right card -->
+      <div class="right-card">
+        <h3>Why Choose Us</h3>
+        <p>Expert stylists who care, premium extensions that last, and personalised aftercare to maintain hair health.</p>
+        <img src="images/image6.jpg" class="sub-img">
+        <img src="images/image9.jpg" class="sub-img">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =reviews= -->
+  <section id="reviews" class="reviews">
+    <h2>What Our Clients Say</h2>
+
+    <div class="review-wrapper">
+      <button class="review-arrow left-arrow">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="review-track">
+        <div class="review-card"><p>"Absolutely love my new style!"</p><h4>- Andorra P.</h4></div>
+        <div class="review-card"><p>"Amazing extensions, super professional."</p><h4>- Ayomide A.</h4></div>
+        <div class="review-card"><p>"The aftercare tips were a game changer."</p><h4>- Paula G.</h4></div>
+        <div class="review-card"><p>"Box braids were flawless!"</p><h4>- Makayla T.</h4></div>
+        <div class="review-card"><p>"Weave looked so natural!"</p><h4>- Perez O.</h4></div>
+
+        <!-- duplicated for smooth loop -->
+        <div class="review-card"><p>"Absolutely love my new style!"</p><h4>- Sarah J.</h4></div>
+        <div class="review-card"><p>"Amazing extensions, super professional."</p><h4>- Daniel K.</h4></div>
+      </div>
+
+      <button class="review-arrow right-arrow">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <p>© 2025 Crown & Coils. All rights reserved.</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <!-- ==login / signup modal-->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <i class="fa-solid fa-user-circle account-icon"></i>
+        <h2 id="modal-title">Login</h2>
+      </div>
+
+      <!-- login form -->
+      <form id="login-form" class="auth-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="switch-text">
+          Don't have an account?
+          <span id="show-signup">Sign Up</span>
+        </p>
+      </form>
+
+      <!-- signup form -->
+      <form id="signup-form" class="auth-form" style="display: none;">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Create Account</button>
+        <p class="switch-text">Already registered?<span id="show-login">Login</span></p>
+      </form>
+
+      <span id="close-modal" class="close-btn">&times;</span>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

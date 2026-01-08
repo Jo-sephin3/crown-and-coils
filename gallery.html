@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Crown & Coils</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css">
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="gallery.js" defer></script>
+    <!-- auth -->
+    <script src="auth-backend.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ==========================
+           navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo-rbg.png" id="logo-img" alt="Crown & Coils">
+            </div>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services/Hairstyles</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About Us</a></li>
+
+              <li id="login-link">
+                <a id="open-auth" href="javascript:void(0)">Login / Sign Up</a>
+              </li>
+
+              <li id="account-menu-wrapper" style="display:none;">
+                <i class="fa-solid fa-user" id="account-icon" style="font-size:22px; color:#ffecd6; cursor:pointer;"></i>
+                <ul id="account-menu" class="account-dropdown">
+                  <li><a href="profile.html">My Profile</a></li>
+                  <li><a href="bookings.html">My Bookings</a></li>
+                  <li id="logout-btn">Log Out</li>
+                </ul>
+              </li>
+            </ul>
+            </nav>
+        </div>
+
+        <div class="second-section">
+            <img src="images/header.svg" class="banner-img" alt="Banner">
+        </div>
+    </header>
+
+   <section id="gallery" class="gallery-option">
+  <ul class="option-list">
+    <li><a class="gallery-tab active" data-target="women-gallery">Women</a></li>
+    <li><a class="gallery-tab" data-target="men-gallery">Men</a></li>
+    <li><a class="gallery-tab" data-target="kids-gallery">Kids</a></li>
+  </ul>
+
+  <!-- women gallery-->
+  <div class="gallery-grid" id="women-gallery">
+    <div class="gallery-item"><img src="images/women.1.jpg"></div>
+    <div class="gallery-item"><img src="images/women.2.jpg"></div>
+    <div class="gallery-item"><img src="images/women.3.jpg"></div>
+    <div class="gallery-item"><img src="images/women.4.jpg"></div>
+    <div class="gallery-item"><img src="images/women.5.jpg"></div>
+    <div class="gallery-item"><img src="images/women.6.jpg"></div>
+    <div class="gallery-item"><img src="images/women.7.jpg"></div>
+    <div class="gallery-item"><img src="images/women.8.jpg"></div>
+    <div class="gallery-item"><img src="images/women.9.jpg"></div>
+    <div class="gallery-item"><img src="images/women.10.jpg"></div>
+    <div class="gallery-item"><img src="images/women.11.jpg"></div>
+    <div class="gallery-item"><img src="images/women.12.jpg"></div>
+    <div class="gallery-item"><img src="images/women.13.jpg"></div>
+    <div class="gallery-item"><img src="images/women.14.jpg"></div>
+    <div class="gallery-item"><img src="images/women.15.jpg"></div>
+    <div class="gallery-item"><img src="images/women.16.jpg"></div>
+    <div class="gallery-item"><img src="images/women.17.jpg"></div>
+    <div class="gallery-item"><img src="images/women.18.jpg"></div>
+    <div class="gallery-item"><img src="images/women.19.jpg"></div>
+    <div class="gallery-item"><img src="images/image3.jpg"></div>
+  </div>  
+
+  <!-- men gallery -->
+  <div class="gallery-grid" id="men-gallery" style="display:none;">
+    <div class="gallery-item"><img src="images/men.1.jpg"></div>
+    <div class="gallery-item"><img src="images/men.2.jpg"></div>
+    <div class="gallery-item"><img src="images/men.3.jpg"></div>
+    <div class="gallery-item"><img src="images/men.4.jpg"></div>
+    <div class="gallery-item"><img src="images/men.5.jpg"></div>
+    <div class="gallery-item"><img src="images/men.6.jpg"></div>
+    <div class="gallery-item"><img src="images/men.7.jpg"></div>
+    <div class="gallery-item"><img src="images/men.8.jpg"></div>
+    <div class="gallery-item"><img src="images/men.9.jpg"></div>
+    <div class="gallery-item"><img src="images/men.10.jpg"></div>
+  </div>
+
+  <!-- kids gallery -->
+  <div class="gallery-grid" id="kids-gallery" style="display:none;">
+    <div class="gallery-item"><img src="images/kids.1.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.2.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.3.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.4.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.5.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.6.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.7.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.8.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.9.jpg"></div>
+    <div class="gallery-item"><img src="images/kids.10.jpg"></div>
+  </div>
+    </section>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <p>© 2025 Crown & Coils. All rights reserved.</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+
+
+    <!-- login / signup modal-->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fa-solid fa-user-circle account-icon"></i>
+        <h2 id="modal-title">Login</h2>
+      </div>
+
+      <!-- login form -->
+      <form id="login-form" class="auth-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="switch-text">
+          Don't have an account?
+          <span id="show-signup">Sign Up</span>
+        </p>
+      </form>
+
+      <!-- signup form -->
+      <form id="signup-form" class="auth-form" style="display: none;">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Create Account</button>
+        <p class="switch-text">
+          Already registered?
+          <span id="show-login">Login</span>
+        </p>
+      </form>
+
+      <span id="close-modal" class="close-btn">&times;</span>
+
+    </div>
+  </div>
+
+</body>
+</html>

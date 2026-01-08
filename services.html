@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Crown & Coils</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css">
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="services.js" defer></script>
+        <script src="nav.js" defer></script>
+    <script src="calendar.js" defer></script>
+      <!-- auth -->
+    <script src="auth-backend.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- ==========================
+           navigation
+    =========================== -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo-rbg.png" id="logo-img" alt="Crown & Coils">
+            </div>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services/Hairstyles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li id="login-link">
+                        <a id="open-auth">Login / Sign Up</a>
+                    </li>
+                    <li id="account-menu-wrapper" style="display:none;">
+                        <i class="fa-solid fa-user" id="account-icon" style="font-size:22px; color:#ffecd6; cursor:pointer;"></i>
+                        <ul id="account-menu" class="account-dropdown">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="bookings.html">My Bookings</a></li>
+                            <li id="logout-btn">Log Out</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="second-section">
+            <img src="images/header.svg" class="banner-img" alt="Banner">
+        </div>
+    </header>
+
+
+    <!-- ==services section -->
+    <section id="services" class="services-section">
+
+        <h2>Our Services</h2>
+
+        <div class="services-layout">
+
+            <!-- left sidebar -->
+            <div class="category-sidebar">
+                <button class="service-category" data-category="protective">Protective Styles</button>
+                <button class="service-category" data-category="extensions">Hair Extensions & Installations</button>
+                <button class="service-category" data-category="natural">Natural Hair Styling</button>
+                <button class="service-category" data-category="locs">Locs Services</button>
+                <button class="service-category" data-category="coloring">Coloring & Chemical Treatments</button>
+            </div>
+
+
+            <!-- right panel -->
+            <div class="service-panel">
+
+                <!-- protective styles -->
+                <div class="service-list" id="protective-list">
+
+                    <div class="service-item">
+                        <span>Box braids (knotless, traditional)</span>
+                        <button class="book-now" data-service="Box Braids">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Twist styles (Senegalese, Marley, passion twists)</span>
+                        <button class="book-now" data-service="Twist Styles">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Cornrows & feed-in braids</span>
+                        <button class="book-now" data-service="Cornrows">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Goddess braids</span>
+                        <button class="book-now" data-service="Goddess Braids">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Fulani braids</span>
+                        <button class="book-now" data-service="Fulani Braids">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Lemonade braids</span>
+                        <button class="book-now" data-service="Lemonade Braids">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Tribal braids</span>
+                        <button class="book-now" data-service="Tribal Braids">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Loc styles (starter, two-strand, retwist)</span>
+                        <button class="book-now" data-service="Loc Styles">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Faux locs</span>
+                        <button class="book-now" data-service="Faux Locs">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Butterfly locs</span>
+                        <button class="book-now" data-service="Butterfly Locs">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Soft locs</span>
+                        <button class="book-now" data-service="Soft Locs">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Crochet braids</span>
+                        <button class="book-now" data-service="Crochet Braids">Book Now</button>
+                    </div>
+                </div>
+
+
+                <!-- extensions -->
+                <div class="service-list" id="extensions-list">
+
+                    <div class="service-item">
+                        <span>Sew-in weaves</span>
+                        <button class="book-now" data-service="Sew-in Weave">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Quick weaves</span>
+                        <button class="book-now" data-service="Quick Weave">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Glue-less wig installs</span>
+                        <button class="book-now" data-service="Glueless Install">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Lace frontal installs</span>
+                        <button class="book-now" data-service="Frontal Install">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Lace closure installs</span>
+                        <button class="book-now" data-service="Closure Install">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Custom wig construction</span>
+                        <button class="book-now" data-service="Custom Wig">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Tape-in extensions</span>
+                        <button class="book-now" data-service="Tape-ins">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Microlinks</span>
+                        <button class="book-now" data-service="Microlinks">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Clip-in extensions</span>
+                        <button class="book-now" data-service="Clip-ins">Book Now</button>
+                    </div>
+                </div>
+
+
+                <!-- NATURAL HAIR -->
+                <div class="service-list" id="natural-list">
+
+                    <div class="service-item">
+                        <span>Silk press</span>
+                        <button class="book-now" data-service="Silk Press">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Blowout</span>
+                        <button class="book-now" data-service="Blowout">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Natural hair styling</span>
+                        <button class="book-now" data-service="Natural Styling">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Twist-out / Braid-out</span>
+                        <button class="book-now" data-service="Twist Out">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Wash and go</span>
+                        <button class="book-now" data-service="Wash and Go">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Rod sets</span>
+                        <button class="book-now" data-service="Rod Sets">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Curly cuts</span>
+                        <button class="book-now" data-service="Curly Cut">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Hydration treatment</span>
+                        <button class="book-now" data-service="Hydration Treatment">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Deep conditioning</span>
+                        <button class="book-now" data-service="Deep Conditioning">Book Now</button>
+                    </div>
+                </div>
+
+
+                <!-- LOCS -->
+                <div class="service-list" id="locs-list">
+
+                    <div class="service-item">
+                        <span>Starter loc installation</span>
+                        <button class="book-now" data-service="Starter Locs">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Loc retwist</span>
+                        <button class="book-now" data-service="Loc Retwist">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Loc repair</span>
+                        <button class="book-now" data-service="Loc Repair">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Loc detox</span>
+                        <button class="book-now" data-service="Loc Detox">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Loc styling</span>
+                        <button class="book-now" data-service="Loc Styling">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Instant locs</span>
+                        <button class="book-now" data-service="Instant Locs">Book Now</button>
+                    </div>
+                </div>
+
+
+                <!-- COLORING -->
+                <div class="service-list" id="coloring-list">
+
+                    <div class="service-item">
+                        <span>Hair colouring (highlights, balayage, full colour)</span>
+                        <button class="book-now" data-service="Colouring">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Root retouch</span>
+                        <button class="book-now" data-service="Root Retouch">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Ombre colouring</span>
+                        <button class="book-now" data-service="Ombre">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Semi-permanent & permanent colour</span>
+                        <button class="book-now" data-service="Permanent Colour">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Relaxer</span>
+                        <button class="book-now" data-service="Relaxer">Book Now</button>
+                    </div>
+
+                    <div class="service-item">
+                        <span>Texturizer</span>
+                        <button class="book-now" data-service="Texturizer">Book Now</button>
+                    </div>
+                </div>
+
+            </div> <!-- END service panel -->
+        </div> <!-- END layout -->
+    </section>
+
+
+
+    <!-- ==========================
+          BOOKING MODALS
+    =========================== -->
+
+    <!-- CALENDAR MODAL -->
+    <div id="calendar-modal">
+        <div id="calendar-container">
+
+            <h3 id="selected-service"></h3>
+
+            <!-- Selected date bar -->
+            <div id="selected-date-bar" style="display:none;">
+                <p id="selected-date-text"></p>
+                <button id="continue-btn">Continue</button>
+            </div>
+
+            <!-- Date picker -->
+            <input type="date" id="mini-date-picker">
+
+            <button id="close-calendar">Close</button>
+        </div>
+    </div>
+
+
+    <!-- PAYMENT MODAL -->
+    <div id="payment-modal">
+        <div id="payment-container">
+            <h3>Choose a Payment Method</h3>
+
+            <button class="payment-option">Pay In Person</button>
+            <button class="payment-option">Pay Now</button>
+
+            <button id="close-payment">Close</button>
+        </div>
+    </div>
+
+      <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2025 Crown & Coils. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+      <!-- ============================
+       LOGIN / SIGNUP MODAL-->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fa-solid fa-user-circle account-icon"></i>
+                <h2 id="modal-title">Login</h2>
+            </div>
+
+      <!-- LOGIN FORM -->
+            <form id="login-form" class="auth-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p class="switch-text">Don't have an account?<span id="show-signup">Sign Up</span></p>
+            </form>
+
+      <!-- SIGNUP FORM -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Create Account</button>
+                <p class="switch-text">Already registered?<span id="show-login">Login</span></p>
+            </form>
+            
+            <span id="close-modal" class="close-btn">&times;</span>
+        </div>
+    </div>
+
+    <li id="account-icon" style="display:none; cursor:pointer;">
+        <i class="fa-solid fa-user" style="font-size:22px; color:#ffecd6;"></i>
+        <ul id="account-menu" class="account-dropdown">
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="bookings.html">My Bookings</a></li>
+            <li id="logout-btn">Log Out</li>
+        </ul>
+    </li>
+
+</body>
+</html>
